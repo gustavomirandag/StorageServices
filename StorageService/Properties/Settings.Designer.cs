@@ -26,8 +26,8 @@ namespace StorageService.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("DefaultEndpointsProtocol=https;AccountName=infnetstorage;AccountKey=WiMikZ6bfRPLM" +
-            "6zlBxZTpk632ay+Fs6BwY5WvE/O0RJZEU6tw9S+mXQUOvO6eK+O8935gkoymFa2EXjow43ZLg==;Endp" +
+        [global::System.Configuration.DefaultSettingValueAttribute("DefaultEndpointsProtocol=https;AccountName=infnetstorage;AccountKey=x2mifE/qYctQa" +
+            "HNDblhWJIZ3zrtfsqFNR4NGVbtgw3q2VVKVbhnwpUpnb6U1HhB4Jy9jaV9EuR75Zqt8e8kLiQ==;Endp" +
             "ointSuffix=core.windows.net")]
         public string StorageConnectionString {
             get {

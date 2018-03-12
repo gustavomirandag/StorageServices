@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StorageService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,13 @@ namespace WebApp.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public void UploadImage(HttpPostedFileBase myImage)
+        {
+            var blobService = new BlobService(Common.GetStorageAccount());
+            String image = blobService.UploadFile("images", myImage.FileName, myImage.InputStream, myImage.ContentType);
         }
 
         public ActionResult About()
@@ -26,5 +34,15 @@ namespace WebApp.Controllers
 
             return View();
         }
+
+        /*        [HttpPost]
+        public void UploadImage(HttpPostedFileBase myImage)
+        {
+            string containerName = "TestContainer";
+            string blockBlogName = "Test.txt";
+
+            CloudStorageAccount cloudStorageAccount = Common.GetStorageAccount();
+            BlobService blobService = new BlobService(cloudStorageAccount);
+        }*/
     }
 }
