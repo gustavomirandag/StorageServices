@@ -12,6 +12,11 @@
     <div class="col-md-4">
         <h2>Upload Image</h2>
         <p>
+            @if (ViewBag.UploadedImageURI != null)
+            {
+                <img src="@ViewBag.UploadedImageURI" />
+            }
+
             @using (Html.BeginForm("UploadImage", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
                 <span>

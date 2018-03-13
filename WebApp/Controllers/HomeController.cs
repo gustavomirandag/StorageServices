@@ -15,10 +15,12 @@ namespace WebApp.Controllers
         }
 
         [HttpPost]
-        public void UploadImage(HttpPostedFileBase myImage)
+        public ActionResult UploadImage(HttpPostedFileBase myImage)
         {
             var blobService = new BlobService(Common.GetStorageAccount());
             String image = blobService.UploadFile("images", myImage.FileName, myImage.InputStream, myImage.ContentType);
+            ViewBag.UploadedImageURI = image;
+            return View("Index");
         }
 
         public ActionResult About()
